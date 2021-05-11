@@ -1,3 +1,5 @@
+package com.javacore.gb.ms;
+
 public class HWLesson1 {
 
     public static void main(String[] args) {
