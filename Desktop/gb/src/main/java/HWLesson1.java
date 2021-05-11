@@ -4,6 +4,7 @@ public class HWLesson1 {
 
         printThreeWords();
         checkSumSign();
+        printColor();
     }
 
     public static void printThreeWords() {
@@ -20,6 +21,16 @@ public class HWLesson1 {
         } else {
             System.out.println("Сумма отрицательная");
         }
+    }
 
+    public static void printColor() {
+        int value = 101;
+        if (value <=0) {
+            System.out.println("Красный");
+        } else if (value >0 && value<=100) {
+            System.out.println("Желтый");
+        } else if (value >100) {
+            System.out.println("Зеленый");
+        }
     }
 }
