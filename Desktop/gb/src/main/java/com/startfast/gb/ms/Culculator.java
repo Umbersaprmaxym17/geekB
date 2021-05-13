@@ -2,7 +2,7 @@ package com.startfast.gb.ms;
 
 import java.util.Scanner;
 
-public class FastStart {
+public class Culculator {
 
     public static void main(String[] args) {
         System.out.println("Type the operation");
