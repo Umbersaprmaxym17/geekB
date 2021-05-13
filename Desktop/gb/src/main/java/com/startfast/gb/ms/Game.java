@@ -4,13 +4,18 @@ import java.util.Scanner;
 
 public class Game {
 
+    private static Scanner scanner = new Scanner(System.in);
+
     public static void main(String[] args) {
 
-        Scanner scanner = new Scanner(System.in);
         System.out.println("Your task is to guess the number ");
         int range =20;
         int random_number = ((int)(Math.random() * range));
+        playLevel(range, random_number);
+        scanner.close();
+    }
 
+    private static void playLevel(int range, int random_number) {
         while (true) {
             System.out.println("Guess the number from 0 to " + range);
             int input_number = scanner.nextInt();
@@ -23,7 +28,7 @@ public class Game {
                 System.out.println("The number is grater than you guessed");
             }
         }
-        scanner.close();
+
     }
 
 
