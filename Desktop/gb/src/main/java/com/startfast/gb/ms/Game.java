@@ -14,7 +14,7 @@ public class Game {
         playLevel(range, random_number);
         scanner.close();
     }
-
+    
     private static void playLevel(int range, int random_number) {
         while (true) {
             System.out.println("Guess the number from 0 to " + range);
