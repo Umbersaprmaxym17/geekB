@@ -6,6 +6,8 @@ public class HWLesson2 {
 
         boolean s = checkSumRange(5, 78);
         System.out.println(s);
+        String number = checkIfNumberPositiveOrNegative(0);
+        System.out.println(number);
 
     }
 
@@ -22,6 +24,15 @@ public class HWLesson2 {
         } else {
             return false;
         }
+    }
+
+    static String checkIfNumberPositiveOrNegative(int a) {
+        if (a >= 0) {
+            return "Number is positive";
+        } else if (a < 0) {
+            return "Number is negative";
+        }
+        return null;
     }
 
 }
