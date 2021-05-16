@@ -8,6 +8,8 @@ public class HWLesson2 {
         System.out.println(s);
         String number = checkIfNumberPositiveOrNegative(0);
         System.out.println(number);
+        boolean b = isNegativeNumber(0);
+        System.out.println(b);
 
     }
 
@@ -33,6 +35,10 @@ public class HWLesson2 {
             return "Number is negative";
         }
         return null;
+    }
+
+    static boolean isNegativeNumber(int a) {
+        return a >= 0 ? false : true;
     }
 
 }
