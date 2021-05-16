@@ -10,6 +10,8 @@ public class HWLesson2 {
         System.out.println(number);
         boolean b = isNegativeNumber(0);
         System.out.println(b);
+        String s1 = printStringGivenNumberOfTimes("Coding java core ", 1);
+        System.out.println(s1);
 
     }
 
@@ -39,6 +41,14 @@ public class HWLesson2 {
 
     static boolean isNegativeNumber(int a) {
         return a >= 0 ? false : true;
+    }
+
+
+    static String  printStringGivenNumberOfTimes(String string, int number) {
+        for (int i = 1; i <=number; i++) {
+            System.out.println(string + " " + i);
+        }
+        return string;
     }
 
 }
