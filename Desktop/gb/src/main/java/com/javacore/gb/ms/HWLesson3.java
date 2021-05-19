@@ -47,7 +47,6 @@ public class HWLesson3 {
         System.out.println(Arrays.toString(digitsToMultiply));
 
 
-
         //4. Создать квадратный двумерный целочисленный массив (количество строк и столбцов одинаковое),
         // и с помощью цикла(-ов) заполнить его диагональные элементы единицами
         // (можно только одну из диагоналей, если обе сложно).
@@ -68,8 +67,24 @@ public class HWLesson3 {
                 squareArray[3][3] = 1;
             }
         }
-
         System.out.println(Arrays.deepToString(squareArray));
+
+
+        System.out.println("********* Task 5 ****************");
+
+
+        System.out.println(Arrays.toString(returnOneDimentinalArray(10,8)));
         }
+
+        // Написать метод, принимающий на вход два аргумента: len и initialValue,
+        // и возвращающий одномерный массив типа int длиной len, каждая ячейка которого равна initialValue;
+        static int[] returnOneDimentinalArray(int len, int initialValue) {
+            int[] oneDimnetinalArray =new int[len];
+            for (int i = 0; i <len ; i++) {
+                oneDimnetinalArray[i] = initialValue;
+            }
+            return oneDimnetinalArray;
+        }
+
     }
 
