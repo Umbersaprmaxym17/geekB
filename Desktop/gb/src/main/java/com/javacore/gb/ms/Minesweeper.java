@@ -15,12 +15,6 @@ public class Minesweeper {
     private static final  int CELL_CLOSE =0;
     private static final  int CELL_FLAG  = -1;
 
-
-
-
-
-
-
     public static void main(String[] args) {
         boolean win = play();
         if(win) {
@@ -30,20 +24,35 @@ public class Minesweeper {
         }
     }
 
-
-
     private static boolean play() {
         int[][] board = generateBoard();
         int[][] moves = new int[BOARD_HEIGHT][BOARD_WIDTH];
         boolean isPassMove;
+        boolean win;
         do {
+            win = isWiner(moves);
             isPassMove =  makeMove(board, moves);
-        }while (isPassMove);
+        }while (isPassMove && !win);
         return isPassMove;
     }
 
+    private static boolean isWiner(int[][] moves) {
+        int openCells = 0;
+        for (int[] lines : moves) {
+            for (int cell : lines) {
+                if (cell == CELL_OPEN) {
+                    openCells++;
+                }
+            }
+         }
+        return openCells + MINES_COUNT == BOARD_HEIGHT * BOARD_HEIGHT;
+        
+
+
+    }
+
     private static boolean makeMove(int[][] board, int[][] moves) {
-        printBoard(board);
+        printBoard(board, moves);
 
         Scanner scanner = new Scanner(System.in);
         int row, line;
@@ -77,16 +86,25 @@ public class Minesweeper {
         return false;
     }
 
-    private static void printBoard(int[][] board) {
+    private static void printBoard(int[][] board, int[][] moves) {
         System.out.print("   ");
         for (char i = 'A'; i < 'A' + BOARD_WIDTH ; i++) {
             System.out.print(" " + i);
         }
         System.out.println();
-
         for (int i = 0; i < BOARD_HEIGHT; i++) {
             System.out.printf("%3d",i);
             for (int j = 0; j <BOARD_WIDTH ; j++) {
+                if (moves[i][j] == CELL_CLOSE) {
+                    System.out.print("[]");
+                    continue;
+                }
+
+                if (moves[i][j] == CELL_FLAG) {
+                    System.out.print("+");
+                    continue;
+                }
+
                 switch (board[i][j]) {
                     case EMPTY:
                         System.out.print(" .");
