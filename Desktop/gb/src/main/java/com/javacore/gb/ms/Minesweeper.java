@@ -6,14 +6,15 @@ import java.util.Scanner;
 public class Minesweeper {
 
 
-    private static final  int BOARD_HEIGHT =10;
-    private static final  int BOARD_WIDTH =10;
-    private static final  int MINES_COUNT =10;
-    private static final  int MINE =1000;
-    private static final  int EMPTY =0;
+    private static final  int BOARD_HEIGHT = 10;
+    private static final  int BOARD_WIDTH = 10;
+    private static final  int MINES_COUNT = 10;
+    private static final  int MINE = 1000;
+    private static final  int EMPTY = 0;
     private static final  int CELL_OPEN = 1;
-    private static final  int CELL_CLOSE =0;
+    private static final  int CELL_CLOSE = 0;
     private static final  int CELL_FLAG  = -1;
+
 
     public static void main(String[] args) {
         boolean win = play();
@@ -46,15 +47,12 @@ public class Minesweeper {
             }
          }
         return openCells + MINES_COUNT == BOARD_HEIGHT * BOARD_HEIGHT;
-        
-
 
     }
 
     private static boolean makeMove(int[][] board, int[][] moves) {
         printBoard(board, moves);
-
-        Scanner scanner = new Scanner(System.in);
+        Scanner  scanner = new Scanner(System.in);
         int row, line;
         boolean flag = false;
         while (true) {
@@ -64,7 +62,7 @@ public class Minesweeper {
                 row = move.charAt(0) - 'A';
                 line = move.charAt(1) - '0';
                 if (move.length() == 3) {
-                    flag = move.charAt(2) == '*';
+                    flag = move.charAt(2) == '☣';
                 }
                 if (row < BOARD_WIDTH && row >= 0 && line < BOARD_HEIGHT && line >= 0 )
                 break;
@@ -91,23 +89,24 @@ public class Minesweeper {
         for (char i = 'A'; i < 'A' + BOARD_WIDTH ; i++) {
             System.out.print(" " + i);
         }
+
         System.out.println();
         for (int i = 0; i < BOARD_HEIGHT; i++) {
             System.out.printf("%3d",i);
             for (int j = 0; j <BOARD_WIDTH ; j++) {
                 if (moves[i][j] == CELL_CLOSE) {
-                    System.out.print("[]");
+                    System.out.print("\uD83C\uDFC0");
                     continue;
                 }
 
                 if (moves[i][j] == CELL_FLAG) {
-                    System.out.print("+");
+                    System.out.print("\uD83D\uDEA9");
                     continue;
                 }
 
                 switch (board[i][j]) {
                     case EMPTY:
-                        System.out.print(" .");
+                        System.out.print("❎");
                         break;
                     case MINE:
                         System.out.print(" *");
@@ -142,6 +141,7 @@ public class Minesweeper {
             board[x][y] = MINE;
             mines--;
         }
+        
     }
 
     private static void calculateMines(int[][] board) {
@@ -151,9 +151,7 @@ public class Minesweeper {
                     continue;
                 }
                 board[i][j] = calculateMinesAround(board, i, j);
-
             }
-
         }
     }
 
