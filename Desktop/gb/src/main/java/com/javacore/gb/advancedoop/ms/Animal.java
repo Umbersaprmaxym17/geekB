@@ -14,7 +14,7 @@ public abstract class Animal {
         if (obstacleLength > 0) {
             System.out.println("Animal " + name + " swims for " + obstacleLength + " Meters");
         } else  {
-            System.out.println("Length cannot be negative or equal tp ZERO ");
+            System.out.println("Length cannot be negative or equal to ZERO ");
         }
     }
 

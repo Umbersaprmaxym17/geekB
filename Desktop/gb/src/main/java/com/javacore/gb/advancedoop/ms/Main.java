@@ -5,6 +5,10 @@ public class Main {
     public static void main(String[] args) {
 
 
+        Animal bobCat = new Cat("Casper the bob Cat ");
+        bobCat.animalInfo();
+
+
         Cat cat1 = new Cat("Tom the Cat ");
         Dog dog1 = new Dog("Bruno the dog");
 
