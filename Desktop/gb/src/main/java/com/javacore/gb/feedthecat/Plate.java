@@ -19,7 +19,7 @@ public class Plate {
         food -= decreaseFoodNumber;
         if (food <= 0) {
             setFood(food = 0);
-            System.out.println("Plate is empty");
+            System.out.println("Plate is empty adding more food");
         }
     }
 
@@ -29,5 +29,9 @@ public class Plate {
 
     public int getFood() {
         return food;
+    }
+
+    protected void addFood(int food) {
+        setFood(food);
     }
 }
