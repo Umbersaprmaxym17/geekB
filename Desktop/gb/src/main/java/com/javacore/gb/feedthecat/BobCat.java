@@ -16,11 +16,25 @@ public class BobCat {
     }
 
     protected void bobCatEat(Plate plate) {
-        plate.decreaseFood(appetite);
-        if (plate.getFood() <= 0 ) {
-            System.out.println(" There is no food left in the plate ");
+        System.out.println(catNickName);
+        if (plate.getFood() >= appetite) {
+            setBellyful(true);
+            plate.decreaseFood(appetite);
+            System.out.println("Cat is full :) ");
+        } else  {
+            System.out.println("Cat is not going to eat , he needs more food");
         }
+
      }
+
+
+    protected void setBellyful(boolean bellyful) {
+        this.bellyful = bellyful;
+    }
+
+    protected void info() {
+        System.out.println(bellyful);
+    }
 
 
 }
