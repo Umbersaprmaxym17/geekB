@@ -9,6 +9,5 @@ public class MainClass {
         Human engineer = new Human();
         tom.isJump();
         engineer.isRun();
-
     }
 }
