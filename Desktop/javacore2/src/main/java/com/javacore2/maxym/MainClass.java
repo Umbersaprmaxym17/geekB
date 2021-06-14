@@ -7,6 +7,9 @@ public class MainClass {
 
         Cat tom = new Cat();
         Human engineer = new Human();
+        Robot r2d2 = new Robot();
+
+        r2d2.isJump();
         tom.isJump();
         engineer.isRun();
     }
