@@ -1,16 +1,20 @@
 package com.javacore2.maxym;
 
+import com.utillsclasses.RunningTreadmill;
+import com.utillsclasses.Wall;
+
 public class MainClass {
 
 
     public static void main(String[] args) {
 
-        Cat tom = new Cat();
+        RunningTreadmill runningTreadmill = new RunningTreadmill();
+        Wall wall = new Wall();
         Human engineer = new Human();
-        Robot r2d2 = new Robot();
 
-        r2d2.isJump();
-        tom.isJump();
-        engineer.isRun();
+
+
+        engineer.isRun(runningTreadmill);
+        engineer.isJump(wall);
     }
 }
