@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Desktop/TicTacToe/TicTacToe.iml" filepath="$PROJECT_DIR$/Desktop/TicTacToe/TicTacToe.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Desktop/UiWindowsApp/UiWindowsApp.iml" filepath="$PROJECT_DIR$/Desktop/UiWindowsApp/UiWindowsApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/geekB.iml" filepath="$PROJECT_DIR$/.idea/geekB.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Desktop/gb/javacore.iml" filepath="$PROJECT_DIR$/Desktop/gb/javacore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Desktop/javacore2/javacore2.iml" filepath="$PROJECT_DIR$/Desktop/javacore2/javacore2.iml" />
+    </modules>
+  </component>
+</project>
