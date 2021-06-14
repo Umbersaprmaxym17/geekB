@@ -11,10 +11,14 @@ public class MainClass {
         RunningTreadmill runningTreadmill = new RunningTreadmill();
         Wall wall = new Wall();
         Human engineer = new Human();
+        Cat Tom = new Cat();
+        Robot r2d2 = new Robot();
 
 
 
         engineer.isRun(runningTreadmill);
         engineer.isJump(wall);
+        r2d2.isJump(wall);
+        r2d2.isRun(runningTreadmill);
     }
 }
