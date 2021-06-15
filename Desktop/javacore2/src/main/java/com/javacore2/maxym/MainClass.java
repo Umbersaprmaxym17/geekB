@@ -20,5 +20,9 @@ public class MainClass {
         engineer.isJump(wall);
         r2d2.isJump(wall);
         r2d2.isRun(runningTreadmill);
+
+
+        
+
     }
 }
