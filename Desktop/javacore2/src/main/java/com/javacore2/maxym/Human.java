@@ -10,7 +10,7 @@ public class Human implements Run, Jump {
 
 
     public void isJump(Wall wall) {
-        if (wall != null) {
+        if (wall != null ) {
             System.out.println("Human jumps over the wall");
         }
     }

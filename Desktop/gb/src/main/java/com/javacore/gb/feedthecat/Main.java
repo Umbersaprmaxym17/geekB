@@ -29,7 +29,7 @@ public class Main {
         cats[2] = new BobCat("BigToe", 25,false);
 
         for (int i = 0; i < cats.length ; i++) {
-            cats[i].bobCatEat(plate);
+//            cats[i].bobCatEat(plate);
             System.out.println(cats[i].bellyful);
 
         } if (plate.getFood() == 0 ) {

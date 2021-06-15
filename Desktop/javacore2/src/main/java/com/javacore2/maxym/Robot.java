@@ -6,6 +6,14 @@ import com.utillsclasses.RunningTreadmill;
 import com.utillsclasses.Wall;
 
 public class Robot implements Run, Jump  {
+
+    protected String model;
+
+
+    public Robot(String model) {
+        this.model = model;
+    }
+
     public void isJump(Wall wall) {
         if (wall != null) {
             System.out.println("Robot jumps over the wall");
