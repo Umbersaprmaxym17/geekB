@@ -7,7 +7,6 @@ public class MainClass {
 
     public static void main(String[] args) {
 
-
         String[][] strings = new String[4][4];
         strings[0][0]  = "one";
         strings[0][1]  = "two";
@@ -26,6 +25,8 @@ public class MainClass {
         strings[3][1]  = "fourteen";
         strings[3][2]  = "fifteen";
         strings[3][3]  = "eighteen";
+
+
 
 
         Arrays.deepToString(strings);
