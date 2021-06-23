@@ -40,7 +40,7 @@ public class Main {
         PhoneBookUser phoneBookUser1 = new PhoneBookUser("Kovalenko", "347886837788");
         PhoneBookUser phoneBookUser2 = new PhoneBookUser("Ivanova", "34788688838");
         PhoneBookUser phoneBookUser3 = new PhoneBookUser("Dubova", "34788642344");
-        PhoneBookUser phoneBookUser4 = new PhoneBookUser("Kravec", "45934998989");
+        PhoneBookUser phoneBookUser4 = new PhoneBookUser("Mazura", "01234423888");
         PhoneBookUser phoneBookUser5 = new PhoneBookUser("Mazura", "45934998989");
 
         phones.add(phoneBookUser1);
@@ -49,15 +49,21 @@ public class Main {
         phones.add(phoneBookUser4);
         phones.add(phoneBookUser5);
 
-        System.out.println(phones);
+
+        findUserPhoneByName(phones, "Mazura");
+
+    }
 
 
 
+    static void findUserPhoneByName(List<PhoneBookUser> phoneBookUsers, String lastname) {
+        for (int i = 0; i < phoneBookUsers.size(); i++) {
+            if (lastname == phoneBookUsers.get(i).lastName) {
+                System.out.println( "Last name :" + phoneBookUsers.get(i).lastName + " phone number is :" +
+                        phoneBookUsers.get(i).phoneNumber);
+            }
 
-
-
-
-
+        }
 
     }
 
