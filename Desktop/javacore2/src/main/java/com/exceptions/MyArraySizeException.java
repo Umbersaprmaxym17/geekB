@@ -2,18 +2,21 @@ package com.exceptions;
 
 
 
-public class MyArraySizeException extends Throwable{
-    public MyArraySizeException(String message) {
-        super(message);
+public class MyArraySizeException extends RuntimeException{
+    public MyArraySizeException() {
+        super("Array size format is incorrect");
     }
-
-    public MyArraySizeException(Throwable e) {
-        super(e);
-    }
-
-    public MyArraySizeException(String message, Throwable cause) {
-        super(message, cause);
-    }
+//    public MyArraySizeException(String message) {
+//        super(message);
+//    }
+//
+//    public MyArraySizeException(RuntimeException e) {
+//        super(e);
+//    }
+//
+//    public MyArraySizeException(String message, RuntimeException cause) {
+//        super(message, cause);
+//    }
 
     //    public MyArraySizeException(String s) {
 //

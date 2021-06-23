@@ -8,85 +8,66 @@ public class MainClass{
 
     public static void main(String[] args) throws MyArraySizeException {
 
-        String[][] users = new String[4][5];
+        String[][] users = new String[4][4];
 
-        users[0][0]  = "one";
-        users[0][1]  = "two";
-        users[0][2]  = "three";
+        users[0][0]  = "1";
+        users[0][1]  = "2";
+        users[0][2]  = "3";
         users[0][3]  = "4";
-        users[1][0]  = "five";
-        users[1][1]  = "six";
-        users[1][2]  = "seven";
-        users[1][3]  = "eight";
+        users[1][0]  = "5";
+        users[1][1]  = "6";
+        users[1][2]  = "7";
+        users[1][3]  = "8";
 
-        users[2][0]  = "nine";
-        users[2][1]  = "ten";
-        users[2][2]  = "eleven";
-        users[2][3]  = "twelve";
-        users[3][0]  = "thirteen";
-        users[3][1]  = "fourteen";
-        users[3][2]  = "fifteen";
-        users[3][3]  = "eighteen";
-    //    users[3][4]  = "nothing is here";
-
-        printTwoDimensionalArray(users);
+        users[2][0]  = "9";
+        users[2][1]  = "10";
+        users[2][2]  = "11";
+        users[2][3]  = "12";
+        users[3][0]  = "13";
+        users[3][1]  = "14";
+        users[3][2]  = "15";
+        users[3][3]  = "16";
+  //      users[3][4]  = "nothing is here";
 
 
-
-
-    }
-
-    public static   void printTwoDimensionalArray(String[][] array) throws MyArraySizeException {
-//        int height   = array.length;
-//        int width  = array[0].length;
-//        if (height > 4 && width < 4) {
-//            throw new MyArraySizeException("Array size is less or more than 2 dimensional 4*4 ");
-//        }else {
-//            System.out.println(Arrays.deepToString(array));
-//        }
-
-        for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array[i].length; j++) {
-                try {
-                    int convertedStringToDigit = Integer.parseInt(Arrays.deepToString(array));
-                    System.out.print(convertedStringToDigit);
-                    System.out.println(Arrays.deepToString(array));
-                } catch (NumberFormatException e) {
-                    e.printStackTrace();
-                    System.out.println(" Catch 1 NumberFormatException");
-                } finally {
-                    System.out.println();
-                }
-            }
+        try {
+            System.out.println(printTwoDimensionalArray(users));
+        } catch (MyArraySizeException e) {
+            e.printStackTrace();
+        } catch (MyArrayDataException e) {
+            e.printStackTrace();
         }
 
 
 
 
 
+    }
 
-//        int height   = array.length;
-//        int width  = array[0].length;
-//        if (height > 4 && width < 4) {
-//           // throw new MyArraySizeException(" Array size is more or less  than 4");
-//            System.out.println(" Array size is more or less  than 4");
-//        } else {
-//            System.out.println(Arrays.deepToString(array));
-//        }
-//        try {
-//            System.out.println(Arrays.deepToString(array));
-//        }catch ( ArrayIndexOutOfBoundsException exception) {
-//            System.out.println(exception.getMessage());
-//        }catch (MyArraySizeException ex) {
-//            System.out.println(ex.getMessage());
-//        }
-//           try {
-//               System.out.println(Arrays.deepToString(array));
-//               throw new MyArraySizeException();
-//           } catch (MyArraySizeException ex) {
-//               System.out.println(ex.getMessage());
-//
-//           }
+    public static   int printTwoDimensionalArray(String[][] array) throws MyArraySizeException, MyArrayDataException {
+        int height   = array.length;
+        int width  = array[0].length;
+        if (height != 4 && width != 4) {
+            throw new MyArraySizeException();
+        }else {
+            System.out.println(Arrays.deepToString(array));
+        }
+
+
+        int sum = 0;
+        for (int i = 0; i < array.length; i++) {
+
+            for (int j = 0; j < array[0].length; j++) {
+                try {
+                    sum += Integer.parseInt(array[i][j]);
+                } catch (NumberFormatException e) {
+                    throw new MyArrayDataException();
+                }
+            }
+        }
+        return sum;
+
+
 
 
 
