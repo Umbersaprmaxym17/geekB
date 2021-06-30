@@ -14,9 +14,6 @@ public class Multithreaded {
     }
 
 
-
-
-
     public static int[] createArray(long arraySize) {
         long startTime = System.currentTimeMillis();
         int[] array = new int[(int) arraySize];
