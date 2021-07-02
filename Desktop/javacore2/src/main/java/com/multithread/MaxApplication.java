@@ -55,14 +55,7 @@ public class MaxApplication {
             array[i] = 1;
         }
 
-//        System.arraycopy(array, 0, array[0], 0, array[array.length]/2);
-//        System.arraycopy(array,
-//                array[array.length]/2,
-//                array[array.length],
-//                array[array.length]/2, h);
 
-//        System.arraycopy(array, 0, a1, 0, h);
-//        System.arraycopy(array, h, a2, 0, h);
 
 
         for (int i = 0; i <  array.length; i++) {
