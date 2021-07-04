@@ -14,7 +14,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="javacore" target="1.5" />
-      <module name="javacore2" target="1.5" />
+      <module name="javacore2" target="7" />
       <module name="TicTacToe" target="1.5" />
       <module name="UiWindowsApp" target="1.5" />
     </bytecodeTargetLevel>
