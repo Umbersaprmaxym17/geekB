@@ -16,11 +16,14 @@ public class EchoServer {
             System.out.println("Client connected");
             DataInputStream inputStream = new DataInputStream(socket.getInputStream());
             DataOutputStream outputStream = new DataOutputStream(socket.getOutputStream());
-            String s;
-            do {
-                s = inputStream.readUTF();
+
+            while (true){
+                String s = inputStream.readUTF();
+                if ("/end".equals(s)) {
+                    break;
+                }
                 outputStream.writeUTF(" Echo "  + s);
-            } while (!"/end".equals(s));
+            }
 
         } catch (IOException e) {
             e.printStackTrace();
