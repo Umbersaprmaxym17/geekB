@@ -13,10 +13,10 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="javacore" target="1.5" />
+      <module name="javacore" target="11" />
       <module name="javacore2" target="11" />
-      <module name="TicTacToe" target="1.5" />
-      <module name="UiWindowsApp" target="1.5" />
+      <module name="TicTacToe" target="11" />
+      <module name="UiWindowsApp" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>
